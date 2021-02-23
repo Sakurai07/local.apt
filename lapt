@@ -2,7 +2,7 @@
 
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-MARKER='\033[1m[NOTROOT]\033[0m'
+MARKER='\033[1m[LAPT]\033[0m'
 cd $DIR
 which apt-get 2> /dev/null >&2
 if [ $? -eq 0 ]; then
@@ -63,7 +63,7 @@ case $1 in
                     echo "apt-rdepends is not installed, if you want recursive"
                     echo "         installation run the following command:"
                     echo ""
-                    echo "notroot install apt-rdepends"
+                    echo "lapt install apt-rdepends"
                     echo ""
                 fi
                 apt-get download $package
